@@ -1,4 +1,4 @@
-package actividad5;
+package clase1;
 
 public abstract class Vehiculo {
     private String numero_matricula;

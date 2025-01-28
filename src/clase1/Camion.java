@@ -1,4 +1,4 @@
-package actividad5;
+package clase1;
 
 public class Camion extends Vehiculo{
     public double getCapacidad_de_carga() {
