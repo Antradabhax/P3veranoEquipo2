@@ -1,4 +1,4 @@
-package actividad5;
+package clase1;
 
 public class Auto extends Vehiculo {
     private int cantidad_de_puertas;

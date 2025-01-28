@@ -1,4 +1,4 @@
-package actividad5;
+package clase1;
 
 public enum TipoDeMoto {
     DEPORTIVA,
