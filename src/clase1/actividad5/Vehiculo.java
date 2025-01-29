@@ -1,4 +1,4 @@
-package clase1;
+package clase1.actividad5;
 
 public abstract class Vehiculo {
     private String numero_matricula;
@@ -28,10 +28,8 @@ public abstract class Vehiculo {
         return modelo;
     }
 
-    private void obtenerInfoVehiculo(){
-        System.out.print(this.getModelo());
-        System.out.print(this.getMarca());
-        System.out.print(this.getNumero_matricula());
+    public void obtenerInfoVehiculo(){
+        System.out.print(this.getModelo() + " | " + this.getMarca() + " | " + this.getNumero_matricula() + "\n");
     }
 
 
