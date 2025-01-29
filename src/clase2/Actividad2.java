@@ -1,6 +1,7 @@
 package clase2;
 
 public class Actividad2 {
+
     public void multiplicarMatCuadrada(int[][] mat1, int[][] mat2) {
         // fila * columna
         int n = mat1.length;
