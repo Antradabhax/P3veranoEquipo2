@@ -1,6 +1,5 @@
 package clase1;
 
-import clase2.Actividad1;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +13,15 @@ public class Main {
         // ##############
 
         // ACTIVIDAD 3
+        Actividad3 actividad3 = new Actividad3();
+        actividad3.calculadora();
+
+        // ACTIVIDAD 4 - ATENCION: Para probarlo, por favor deshabilitar la Actividad 3
+        Actividad4 actividad4 = new Actividad4();
+        actividad4.ejecutarPrograma();
+
+
+        // ACTIVIDAD 5
         Auto auto = new Auto();
     }
 }
