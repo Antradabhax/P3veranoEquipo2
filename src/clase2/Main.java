@@ -12,13 +12,6 @@ public class Main {
         int[][] matriz1 = {{2,4},{4,8}};
         int[][] matriz2 = {{1,3},{5,7}};
         actividad2.multiplicarMatCuadrada(matriz1,matriz2);
-
-        // ACTIVIDAD 2 - Se pueden modificar los valores de las matrices
-        System.out.println("\n");
-        System.out.println("Actividad 2:");
-        Actividad2 actividad2 = new Actividad2();
-        actividad2.ejecutar();
-
         // ACTIVIDAD 3
 
         // ACTIVIDAD 4
