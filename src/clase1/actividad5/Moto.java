@@ -1,13 +1,13 @@
-package clase1;
+package clase1.actividad5;
 
 public class Moto extends Vehiculo {
-    private TipoDeMoto tipoDeMoto;
+    public TipoDeMoto getTipoDeMoto() {
+        return tipoDeMoto;
+    }
 
     public void setTipoDeMoto(TipoDeMoto tipoDeMoto) {
         this.tipoDeMoto = tipoDeMoto;
     }
 
-    public TipoDeMoto getTipoDeMoto() {
-        return tipoDeMoto;
-    }
+    private TipoDeMoto tipoDeMoto;
 }
