@@ -1,0 +1,15 @@
+public void mejorScoring(int[] clientes, inicio, fin){
+	if (inicio == fin){ // caso base 1 solo cliente en la lista
+		return clientes[inicio];
+	}
+	
+	medio = (inicio + fin) / 2;
+	
+	maxIzquierda = mejorScoring(clientes, inicio, medio);
+	maxDerecha = mejorScoring(clients, medio, fin);
+	
+	if(maxIzquierda.scoring > maxDerecha.scoring){ // se comparan los clientes y se retorna el scoring más grande.
+		return maxIzquierda
+	}else{
+	return maxDerecha}
+}
