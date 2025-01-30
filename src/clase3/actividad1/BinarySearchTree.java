@@ -26,6 +26,7 @@ public class BinarySearchTree {// Método para buscar un valor en el BST
     }
 
     public static void main(String[] args) {
+        System.out.println("Actividad 1:");
         BinarySearchTree tree = new BinarySearchTree();
 
         // Crear un árbol de ejemplo
