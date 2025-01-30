@@ -28,6 +28,7 @@ public class BusquedaBinaria {
     }
 
     public static void main(String[] args) {
+        System.out.println("Actividad 2:");
         int[] arreglo = {2, 5, 7, 9, 11, 21, 23};
         int objetivo = 17;
         int resultado = busquedaBinaria(arreglo, objetivo);
