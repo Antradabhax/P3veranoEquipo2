@@ -1,0 +1,48 @@
+Función encontrarDosMaximosScoring(clientes, inicio, fin):
+    // Caso base: si hay un solo cliente
+    Si inicio == fin:
+        Retornar [clientes[inicio], clientes[inicio]]
+
+    // Caso base: si hay dos clientes
+    Si fin - inicio == 1:
+        Si clientes[inicio].scoring > clientes[fin].scoring:
+            Retornar [clientes[inicio], clientes[fin]]
+        Sino:
+            Retornar [clientes[fin], clientes[inicio]]
+
+    // Dividir la lista en dos mitades
+    medio = (inicio + fin) / 2
+
+    // Conquistar: encontrar los dos máximos en cada mitad
+    maximosIzquierda = encontrarDosMaximosScoring(clientes, inicio, medio)
+    maximosDerecha = encontrarDosMaximosScoring(clientes, medio + 1, fin)
+
+    // Combinar: encontrar los dos máximos entre los cuatro clientes
+    Retornar combinarMaximos(maximosIzquierda, maximosDerecha)
+
+Función combinarMaximos(maximosIzquierda, maximosDerecha):
+    // Crear una lista con los cuatro clientes
+    candidatos = [maximosIzquierda[0], maximosIzquierda[1], maximosDerecha[0], maximosDerecha[1]]
+
+    // Encontrar los dos clientes con los scoring más altos
+    primero = candidatos[0]
+    segundo = candidatos[1]
+
+    Para cada cliente en candidatos:
+        Si cliente.scoring > primero.scoring:
+            segundo = primero
+            primero = cliente
+        Sino si cliente.scoring > segundo.scoring:
+            segundo = cliente
+
+    Retornar [primero, segundo]
+
+Análisis de Recurrencia:
+1. El problema se divide en dos subproblemas de tamaño n/2.
+2. La combinación de los resultados toma tiempo constante O(1) porque solo se comparan 4 elementos.
+3. La recurrencia es T(n) = 2T(n/2) + O(1).
+4. Aplicando el método inductivo:
+   - En cada nivel de recursión, el problema se divide en dos mitades.
+   - El número de niveles de recursión es log₂(n).
+   - En cada nivel, se realizan operaciones constantes.
+   - Por lo tanto, la complejidad total es O(n log n).
