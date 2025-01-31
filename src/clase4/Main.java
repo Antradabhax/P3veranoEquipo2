@@ -24,9 +24,16 @@ public class Main {
 
         Cliente mejor = actividad1.mejorScoring(clientes, 0, clientes.size() - 1);
         System.out.println(mejor.getScoring());
-        // ################################### //
+
 
         // ACTIVIDAD 2
+        int[] numeros = {3, 7, 1, 9, 5, 8, 2};
 
+        // Llamar al método de Actividad2 para encontrar los dos números mayores
+        Actividad2 actividad2 = new Actividad2();
+        int[] dosMayores = actividad2.encontrarDosMayores(numeros, 0, numeros.length - 1);
+
+        // Imprimir los dos números mayores
+        System.out.println("Los dos números mayores son: " + dosMayores[0] + " y " + dosMayores[1]);
     }
 }

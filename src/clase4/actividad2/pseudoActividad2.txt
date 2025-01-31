@@ -1,0 +1,31 @@
+Función encontrarDosMayores(numeros, inicio, fin):
+    Si fin - inicio == 1:
+        Si numeros[inicio] > numeros[fin]:
+            Retornar [numeros[inicio], numeros[fin]]
+        Sino:
+            Retornar [numeros[fin], numeros[inicio]]
+
+    Si inicio == fin:
+        Retornar [numeros[inicio], numeros[inicio]]
+
+    medio = (inicio + fin) / 2
+
+    mayoresIzquierda = encontrarDosMayores(numeros, inicio, medio)
+    mayoresDerecha = encontrarDosMayores(numeros, medio + 1, fin)
+
+    Retornar combinarMayores(mayoresIzquierda, mayoresDerecha)
+
+Función combinarMayores(mayoresIzquierda, mayoresDerecha):
+    mayores = [mayoresIzquierda[0], mayoresIzquierda[1], mayoresDerecha[0], mayoresDerecha[1]]
+
+    primero = mayores[0]
+    segundo = mayores[1]
+
+    Para i desde 2 hasta 3:
+        Si mayores[i] > primero:
+            segundo = primero
+            primero = mayores[i]
+        Sino si mayores[i] > segundo:
+            segundo = mayores[i]
+
+    Retornar [primero, segundo]
