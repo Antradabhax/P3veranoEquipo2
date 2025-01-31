@@ -1,4 +1,4 @@
-package clase4.actividad2;
+package clase4.Actividad2;
 
 public class Actividad2 {
 
