@@ -1,50 +1,47 @@
 package clase4.Actividad4;
 
-import java.util.Arrays;
+    import java.util.ArrayList;
+    import java.util.Collections;
 
-public class Actividad4 {
-
-    /**
-     * Actividad 4 Clase 4: Encuentra los n elementos más grandes de un arreglo 'arr' usando divide y conquer.
-     * @param arr Arreglo de enteros
-     * @param n   Cantidad de elementos más grandes que se desean
-     * @return    Arreglo de tamaño n con los elementos más grandes
-     */
-    public static int[] encontrarNMasGrandes(int[] arr, int n) {
-        // Caso base: si el arreglo tiene n o menos elementos, se devuelven todos
-        if (arr.length <= n) {
-            // Retornamos una copia para no modificar el original
-            return arr.clone();
+    public class Actividad4 {
+        public static void main(String[] args) {
+            ArrayList<Integer> numeros = cargarDatos();
+            System.out.println(obtenerMayores(numeros, 3));
         }
 
-        // Dividir el arreglo en dos partes
-        int mid = arr.length / 2;
-        int[] izquierda = new int[mid];
-        int[] derecha = new int[arr.length - mid];
-
-        // Copiar datos a los subarreglos
-        System.arraycopy(arr, 0, izquierda, 0, mid);
-        System.arraycopy(arr, mid, derecha, 0, arr.length - mid);
-
-        // Llamadas recursivas para encontrar los n más grandes en cada mitad
-        int[] topIzquierda = encontrarNMasGrandes(izquierda, n);
-        int[] topDerecha   = encontrarNMasGrandes(derecha, n);
-
-        // Combinar resultados parciales
-        int[] combinado = new int[topIzquierda.length + topDerecha.length];
-        System.arraycopy(topIzquierda, 0, combinado, 0, topIzquierda.length);
-        System.arraycopy(topDerecha, 0, combinado, topIzquierda.length, topDerecha.length);
-
-        // Ordenar el arreglo combinado (ascendente, por defecto en Java)
-        Arrays.sort(combinado);
-
-        // Los n más grandes estarán al final si está ordenado ascendente
-        int start = Math.max(0, combinado.length - n);
-        int[] resultado = new int[n];
-        for (int i = start; i < combinado.length; i++) {
-            resultado[i - start] = combinado[i];
+        public static ArrayList<Integer> obtenerMayores(ArrayList<Integer> numeros, int cantidad) {
+            return obtenerMayoresSub(numeros, cantidad, 0, numeros.size());
         }
 
-        return resultado;
+        private static ArrayList<Integer> obtenerMayoresSub(ArrayList<Integer> numeros, int cantidad, int inicio, int fin) {
+            if (cantidad <= 0 || inicio >= fin) {
+                return new ArrayList<>();
+            }
+
+            if (fin - inicio <= cantidad) {
+                ArrayList<Integer> sublist = new ArrayList<>(numeros.subList(inicio, fin));
+                Collections.sort(sublist, Collections.reverseOrder());
+                return new ArrayList<>(sublist.subList(0, Math.min(cantidad, sublist.size())));
+            }
+
+            int mid = (inicio + fin) / 2;
+            ArrayList<Integer> left = obtenerMayoresSub(numeros, cantidad, inicio, mid);
+            ArrayList<Integer> right = obtenerMayoresSub(numeros, cantidad, mid, fin);
+
+            ArrayList<Integer> result = new ArrayList<>(left);
+            result.addAll(right);
+            Collections.sort(result, Collections.reverseOrder());
+
+            return new ArrayList<>(result.subList(0, Math.min(cantidad, result.size())));
+        }
+
+        public static ArrayList<Integer> cargarDatos() {
+            ArrayList<Integer> numeros = new ArrayList<>();
+            numeros.add(12);
+            numeros.add(20);
+            numeros.add(10);
+            numeros.add(15);
+            numeros.add(9);
+            return numeros;
+        }
     }
-}
