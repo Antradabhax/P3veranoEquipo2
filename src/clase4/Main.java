@@ -4,9 +4,13 @@ import clase4.Actividad1.Actividad1;
 import clase4.Actividad1.Cliente;
 import clase4.Actividad2.Actividad2;
 import clase4.Actividad3.Actividad3;
+import clase4.Actividad4.Actividad4;
+import clase4.Actividad5.Actividad5;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -62,5 +66,42 @@ public class Main {
         System.out.println("Los dos clientes con los scoring máximos son:");
         System.out.println(dosMaximos[0]);
         System.out.println(dosMaximos[1]);
+
+
+        //ACTIVIDAD 4
+        System.out.println("\n");
+        System.out.println("------------");
+        System.out.println("Actividad 4:");
+        int[] arreglo = { 5, 1, 9, 3, 7, 2, 10, 4, 8, 6 };
+        int n = 3;
+
+        int[] resultado = Actividad4.encontrarNMasGrandes(arreglo, n);
+
+        System.out.println("Los " + n + " elementos más grandes son: " + Arrays.toString(resultado));
+
+
+        //ACTIVIDAD 5
+        // Corredores de ejemplo
+        List<Actividad5.Corredor> corredores = new ArrayList<>();
+        corredores.add(new Actividad5.Corredor("Derek",  "Infantil", 15.2));
+        corredores.add(new Actividad5.Corredor("George",    "Infantil", 14.8));
+        corredores.add(new Actividad5.Corredor("Floyd",  "Juvenil",  13.9));
+        corredores.add(new Actividad5.Corredor("Pepe",  "Infantil", 16.0));
+        corredores.add(new Actividad5.Corredor("Maximus",  "Juvenil",  12.5));
+        corredores.add(new Actividad5.Corredor("Propylon",  "Senior",   11.7));
+        corredores.add(new Actividad5.Corredor("Droid", "Senior",   12.1));
+        corredores.add(new Actividad5.Corredor("Helena",  "Master",   10.5));
+        corredores.add(new Actividad5.Corredor("Irene",  "Master",   10.2));
+
+        // Obtener los mejores tiempos por categoría
+        Map<String, Actividad5.Corredor> mejoresTiempos = Actividad5.encontrarMejoresTiemposPorCategoria(corredores);
+
+        // Mostrar resultados
+        System.out.println("Mejores tiempos por categoría:");
+        for (String categoria : mejoresTiempos.keySet()) {
+            Actividad5.Corredor c = mejoresTiempos.get(categoria);
+            System.out.println("- " + categoria + ": "
+                    + c.getNombre() + " con " + c.getTiempo() + "s");
+        }
     }
 }
