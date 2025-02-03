@@ -1,0 +1,30 @@
+// Pseudocódigo para encontrar los "n" elementos más grandes de una lista
+// utilizando la técnica de Divide y Vencerás
+
+funcion encontrarNMasGrandes(lista, n):
+    si longitud(lista) <= n entonces
+        // Si la lista tiene n o menos elementos, todos son parte del resultado
+        retornar lista
+
+    mitad = longitud(lista) / 2
+
+    // Dividir la lista en dos mitades
+    listaIzq = sublista(lista, 0, mitad-1)
+    listaDer = sublista(lista, mitad, longitud(lista)-1)
+
+    // Resolver recursivamente en cada mitad
+    topIzq = encontrarNMasGrandes(listaIzq, n)
+    topDer = encontrarNMasGrandes(listaDer, n)
+
+    // Combinar resultados:
+    // Unir los dos arreglos de resultados parciales
+    combinado = concatenar(topIzq, topDer)
+
+    // Ordenar (descendente o ascendente y luego tomar los últimos n)
+    ordenar(combinado) // Asumiendo que al final tendremos orden ascendente
+
+    // Tomar los n más grandes (si orden ascendente, están al final)
+    desde = max(0, longitud(combinado) - n)
+    resultado = sublista(combinado, desde, longitud(combinado)-1)
+
+    retornar resultado
