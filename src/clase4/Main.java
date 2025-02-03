@@ -8,13 +8,13 @@ import clase4.Actividad4.Actividad4;
 import clase4.Actividad5.Actividad5;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         // ACTIVIDAD 1
+        System.out.println("------------");
         System.out.println("Actividad 1:");
         List<Cliente> clientes = new ArrayList<>();
 
@@ -41,6 +41,7 @@ public class Main {
         int[] dosMayores = actividad2.encontrarDosMayores(numeros, 0, numeros.length - 1);
 
         // Imprimir los dos números mayores
+        System.out.println("------------");
         System.out.println("\n");
         System.out.println("------------");
         System.out.println("Actividad 2:");
@@ -48,6 +49,7 @@ public class Main {
 
         
         //ACTIVIDAD 3
+        System.out.println("------------");
         System.out.println("\n");
         System.out.println("------------");
         System.out.println("Actividad 3:");
@@ -69,18 +71,24 @@ public class Main {
 
 
         //ACTIVIDAD 4
+        System.out.println("------------");
         System.out.println("\n");
         System.out.println("------------");
         System.out.println("Actividad 4:");
-        int[] arreglo = { 5, 1, 9, 3, 7, 2, 10, 4, 8, 6 };
-        int n = 3;
-
-        int[] resultado = Actividad4.encontrarNMasGrandes(arreglo, n);
-
-        System.out.println("Los " + n + " elementos más grandes son: " + Arrays.toString(resultado));
-
+//        int[] arreglo = { 5, 1, 9, 3, 7, 2, 10, 4, 8, 6 };
+//        int n = 3;
+//
+//        int[] resultado = Actividad4.encontrarNMasGrandes(arreglo, n);
+//
+//        System.out.println("Los " + n + " elementos más grandes son: " + Arrays.toString(resultado));
+//
+        Actividad4.main(args);
 
         //ACTIVIDAD 5
+        System.out.println("------------");
+        System.out.println("\n");
+        System.out.println("------------");
+        System.out.println("Actividad 5:");
         // Corredores de ejemplo
         List<Actividad5.Corredor> corredores = new ArrayList<>();
         corredores.add(new Actividad5.Corredor("Derek",  "Infantil", 15.2));
@@ -103,5 +111,6 @@ public class Main {
             System.out.println("- " + categoria + ": "
                     + c.getNombre() + " con " + c.getTiempo() + "s");
         }
+        System.out.println("------------");
     }
 }
