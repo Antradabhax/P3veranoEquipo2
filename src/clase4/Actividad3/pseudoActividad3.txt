@@ -37,12 +37,3 @@ Función combinarMaximos(maximosIzquierda, maximosDerecha):
 
     Retornar [primero, segundo]
 
-Análisis de Recurrencia:
-1. El problema se divide en dos subproblemas de tamaño n/2.
-2. La combinación de los resultados toma tiempo constante O(1) porque solo se comparan 4 elementos.
-3. La recurrencia es T(n) = 2T(n/2) + O(1).
-4. Aplicando el método inductivo:
-   - En cada nivel de recursión, el problema se divide en dos mitades.
-   - El número de niveles de recursión es log₂(n).
-   - En cada nivel, se realizan operaciones constantes.
-   - Por lo tanto, la complejidad total es O(n log n).

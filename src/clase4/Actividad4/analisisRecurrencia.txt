@@ -1,0 +1,32 @@
+Análisis de Recurrencia para Actividad4
+
+1. División del Problema:
+   - El método `obtenerMayoresSub` divide la lista en dos mitades.
+   - Se realizan dos llamadas recursivas, cada una con la mitad del tamaño del problema original.
+
+2. Combinación de Resultados:
+   - Después de obtener los resultados de las dos mitades, se combinan y se ordenan.
+   - La combinación y ordenación de los resultados tiene una complejidad de O(n log n) debido a la ordenación.
+
+3. Caso Base:
+   - Si el tamaño del subproblema es menor o igual a la cantidad solicitada, se ordena y se devuelve directamente.
+
+Complejidad Total
+
+- División: El problema se divide en dos subproblemas de tamaño n/2.
+- Combinación: La combinación de los resultados de los subproblemas tiene una complejidad de O(n log n).
+
+Recurrencia
+
+La recurrencia para este algoritmo es:
+
+T(n) = 2T(n/2) + O(n log n)
+
+Complejidad Algorítmica
+
+- Inducción:
+  - En cada nivel de recursión, el problema se divide en dos mitades.
+  - La profundidad de la recursión es O(log n).
+  - En cada nivel, la combinación de resultados toma O(n log n).
+
+Por lo tanto, la complejidad total del algoritmo es O(n log^2 n).

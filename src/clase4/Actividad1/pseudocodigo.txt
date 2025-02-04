@@ -1,0 +1,35 @@
+Clase Actividad1:
+
+    Método obtenerCambio(monedas, importe):
+        Ordenar monedas en orden descendente
+        Inicializar lista resultado vacía
+        Inicializar suma a 0
+
+        Para cada índice i desde 0 hasta tamaño de monedas:
+            moneda = monedas[i]
+            Mientras suma + moneda <= importe:
+                Añadir moneda a resultado
+                Incrementar suma por moneda
+                Eliminar moneda de la lista en índice i
+                Decrementar i
+                Si i < 0, romper el bucle
+
+            Si suma es igual a importe:
+                Retornar resultado
+
+        Lanzar excepción "No se puede dar el cambio exacto con las monedas disponibles."
+
+Clase Cliente:
+
+    Atributos:
+        id
+        nombre
+        scoring
+
+    Constructor Cliente(id, nombre, scoring):
+        Asignar id
+        Asignar nombre
+        Asignar scoring
+
+    Método getScoring():
+        Retornar scoring
