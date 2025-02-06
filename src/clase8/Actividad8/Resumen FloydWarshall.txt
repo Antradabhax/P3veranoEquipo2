@@ -1,0 +1,12 @@
+Resumen Floyd-Warshall:
+
+El algoritmo de Floyd-Warshall es versátil en escenarios que requieren calcular
+distancias mínimas entre todos los pares de nodos. Su uso en telecomunicaciones optimiza rutas de datos.
+En logística, reduce costos operativos; y en bioinformática, descubre relaciones críticas en redes biológicas.
+Su limitación principal es la complejidad temporal (O(n^3)), lo que lo hace menos eficiente para grafos muy grandes.
+En pocas palabras, es ideal para encontrar el camino mas corto en un grafo dirigido con peso.
+
+Usos comúnes:
+- Telecomunicaciones: Floyd-Warshall se utiliza para calcular las rutas más cortas entre todos los nodos, optimizando la latencia y el ancho de banda.
+- Logística Urbana: se calculan las rutas optimas entre centros de distribucion, para ahorrar tiempo y costos de transporte.
+- Bioinformática: Se aplica el algoritmo en el análisis de redes de interacción génica para identificar caminos críticos entre proteínas, facilitando el estudio de enfermedades y la identificación de dianas terapéuticas.
