@@ -29,11 +29,25 @@ public class Main {
         Usuario charlie = new Usuario("Charlie");
         Usuario david = new Usuario("David");
 
-        grafoUsuarios.put(alice, new ArrayList<>(Arrays.asList(bob, charlie)));
-        grafoUsuarios.put(bob, new ArrayList<>(Arrays.asList(david)));
-        grafoUsuarios.put(charlie, new ArrayList<>(Arrays.asList(david)));
-        grafoUsuarios.put(david, new ArrayList<>());
+        actividad1.agregarUsuario(grafoUsuarios,alice);
+        actividad1.agregarUsuario(grafoUsuarios, bob);
+        actividad1.agregarUsuario(grafoUsuarios, charlie);
+        actividad1.agregarUsuario(grafoUsuarios, david);
 
-        actividad1.mostrarGrafo(grafoUsuarios);
+        actividad1.seguirUsuario(alice,bob,grafoUsuarios);
+        actividad1.seguirUsuario(alice,charlie,grafoUsuarios);
+        actividad1.seguirUsuario(bob,alice,grafoUsuarios);
+        actividad1.seguirUsuario(bob,charlie,grafoUsuarios);
+        actividad1.seguirUsuario(david, charlie,grafoUsuarios);
+
+        actividad1.listarSeguidos(bob,grafoUsuarios);
+        actividad1.listarSeguidos(alice,grafoUsuarios);
+        actividad1.listarSeguidos(david,grafoUsuarios);
+        actividad1.listarSeguidos(charlie,grafoUsuarios);
+
+        actividad1.listarSeguidores(bob,grafoUsuarios);
+        actividad1.listarSeguidores(alice,grafoUsuarios);
+        actividad1.listarSeguidores(david,grafoUsuarios);
+        actividad1.listarSeguidores(charlie,grafoUsuarios);
     }
 }
