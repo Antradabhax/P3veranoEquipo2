@@ -1,5 +1,5 @@
 # Programacion 3 Verano 2025. **_EQUIPO 2_**
-Repositorio del grupo compuesto por Tomas Molina (usuario: **MolinaTomas**), Marcos Cavicchia (usuario: **Antradabhax**) y Agustin Vukusic para la materia Programación III UADE 2025.
+Repositorio del grupo compuesto por Tomas Molina (usuario: **MolinaTomas**), Marcos Cavicchia (usuario: **Antradabhax**) y Agustin Vukusic (**AgusVuku7**) para la materia Programación III UADE 2025.
 <br><br>
 
 ## Contenido del repositorio
