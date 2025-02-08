@@ -1,0 +1,61 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+class Item {
+    int weight;
+    int value;
+
+    public Item(int weight, int value) {
+        this.weight = weight;
+        this.value = value;
+    }
+}
+
+public class Main {
+
+    //función para calcular el valor máximo
+    public static double getMaxValue(Item[] items, int capacity) {
+        //ordenar los elementos por valor/peso en orden descendente
+        Arrays.sort(items, new Comparator<Item>() {
+            @Override
+            public int compare(Item o1, Item o2) {
+                double ratio1 = (double) o1.value / o1.weight;
+                double ratio2 = (double) o2.value / o2.weight;
+                return Double.compare(ratio2, ratio1); //orden descendente
+            }
+        });
+
+        double totalValue = 0.0;
+        int remainingCapacity = capacity;
+
+        //seleccionar los elementos
+        for (Item item : items) {
+            if (remainingCapacity >= item.weight) {
+                //tomar el elemento completo
+                totalValue += item.value;
+                remainingCapacity -= item.weight;
+            } else {
+                //tomar una fracción del elemento
+                double fraction = (double) remainingCapacity / item.weight;
+                totalValue += item.value * fraction;
+                break; //el camión está lleno
+            }
+        }
+
+        return totalValue;
+    }
+
+    public static void main(String[] args) {
+        //ejemplo de elementos
+        Item[] items = {
+                new Item(10, 60),
+                new Item(20, 100),
+                new Item(30, 120)
+        };
+
+        int capacity = 50; //capacidad del camión
+
+        double maxValue = getMaxValue(items, capacity);
+        System.out.println("El valor máximo que se puede obtener es: $" + maxValue);
+    }
+}

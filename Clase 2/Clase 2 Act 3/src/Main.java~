@@ -1,0 +1,25 @@
+public class Main {
+    class Factura {
+        int idFactura;
+        int idCliente;
+        int importe;
+
+        public Factura(int idFactura, int idCliente, int importe) {
+            this.idFactura = idFactura;
+            this.idCliente = idCliente;
+            this.importe = importe;
+        }
+    }
+    class Cliente {
+        int idCliente;
+        String nombre;
+
+        public Cliente(int idCliente, String nombre) {
+            this.idCliente = idCliente;
+            this.nombre = nombre;
+        }
+    }
+    public static void main(String[] args) {
+
+    }
+}

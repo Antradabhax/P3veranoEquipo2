@@ -1,0 +1,13 @@
+public class Vehiculo {
+    private int matricula;
+    private String marca;
+    private String modelo;
+
+    public Vehiculo(int matricula, String marca, String modelo) {
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    
+}

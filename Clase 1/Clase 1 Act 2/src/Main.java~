@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        int edad = 21;
+        double altura = 1.83;
+        char inicialNombre = 'A';
+        String ciudad = "Hudson";
+
+        
+    }
+}
