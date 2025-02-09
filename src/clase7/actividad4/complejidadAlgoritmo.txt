@@ -1,0 +1,3 @@
+Complejidades del algoritmo de Programación Dinámica:
+- Complejidad Temporal: O(n * presupuesto), donde n es el número de paquetes.
+- Complejidad Espacial: O(n * presupuesto) debido a la tabla bidimensional dp.
