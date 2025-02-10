@@ -1,10 +1,17 @@
 package clase8;
 
+import clase8.Actividad1.Actividad1;
 import clase8.Actividad2.Actividad2;
 import clase8.Actividad3.Actividad3;
 
 public class Main {
     public static void main(String[] args) {
+
+        //ACTIVIDAD 1
+        System.out.println("-------------");
+        System.out.println("Actividad 1: ");
+        Actividad1.ejecutar();
+
         //ACTIVIDAD 2
         System.out.println("-------------");
         System.out.println("Actividad 2: ");
