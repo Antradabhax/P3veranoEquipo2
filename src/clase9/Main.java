@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // ACTIVIDAD 1 PRE CONSULTA
         try {
             String apiKey = "LXH1PS3EG4SOCRT0";
             String symbol = "IBM";
@@ -26,7 +27,7 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
 
-        //ACTIVIDAD 2
+        //ACTIVIDAD 2 CONSULTA ACTIVA
         Scanner scanner = new Scanner(System.in);
         try {
             String apiKey = "LXH1PS3EG4SOCRT0";
