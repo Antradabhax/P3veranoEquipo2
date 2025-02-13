@@ -4,10 +4,5 @@ Repositorio del grupo compuesto por Tomas Molina (usuario: **MolinaTomas**), Mar
 
 ## Contenido del repositorio
 
-El repositorio contiene todas las actividades que se vayan haciendo durante la cursada. Como así también el trabajo practico de la materia.  
+El repositorio contiene todas las actividades que se vayan haciendo durante la cursada. El trabajo práctico estará alojado en un repositorio aparte.
 <br>
-
-## Recrusos utilizados
-- Spring boot
-- IntelliJ Idea para Java
-- Maven
