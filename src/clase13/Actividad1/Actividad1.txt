@@ -1,0 +1,67 @@
+1. Ejemplos de acciones posibles del atacante:
+Inyección SQL: Intentar manipular bases de datos mediante consultas maliciosas.
+
+Ataques DDoS: Sobrecargar el servidor con tráfico falso para interrumpir servicios.
+
+Fuerza bruta: Intentar adivinar credenciales mediante múltiples combinaciones.
+
+Phishing: Engañar a usuarios para robar información sensible.
+
+Explotación de vulnerabilidades: Usar fallos en software o configuraciones.
+
+--------------------------------------------------------------------------------------
+
+2. Funciones del sistema de detección y técnicas/herramientas:
+Monitoreo en tiempo real: Analizar tráfico y registros para identificar anomalías.
+
+Análisis de patrones: Usar machine learning para detectar comportamientos sospechosos.
+
+Firewalls/IPS: Bloquear accesos no autorizados.
+
+Honeypots: Engañar a atacantes para estudiar sus métodos.
+
+Herramientas: Snort (IDS), Wireshark (análisis de red), OSSEC (detección de intrusos).
+
+--------------------------------------------------------------------------------------
+
+3. Aplicación de la poda alfa-beta en el sistema de detección:
+La poda alfa-beta es un algoritmo de optimización utilizado en árboles de decisión para reducir el número de nodos evaluados. En el contexto de ciberseguridad, podría aplicarse para:
+
+Evaluar respuestas óptimas: El sistema simula posibles acciones del atacante (nodos del árbol) y determina la mejor defensa.
+
+Funcionamiento:
+
+Valor alfa: Representa la mejor opción encontrada hasta ahora para el sistema (maximizar seguridad).
+
+Valor beta: Representa la mejor opción para el atacante (minimizar la efectividad de la defensa).
+
+Poda: Si una rama del árbol (ej.: "bloquear IP parcialmente") ofrece un resultado peor que el valor alfa actual, se descarta. Esto evita cálculos innecesarios y acelera la toma de decisiones.
+
+Ejemplo práctico:
+Al detectar un posible DDoS, el sistema evalúa si "aumentar el ancho de banda" (nodo A) es mejor que "filtrar tráfico" (nodo B). Si el nodo A ya garantiza una mitigación suficiente (valor alfa alto), el nodo B se poda para no perder tiempo analizándolo.
+
+--------------------------------------------------------------------------------------
+
+Escenario: Detección de un intento de inyección SQL:
+
+Raíz: [Ataque detectado]
+├── Tipo: ¿Inyección SQL?
+│   ├── Sí
+│   │   ├── Severidad: ¿Alta?
+│   │   │   ├── Sí → [Bloquear IP + Alertar administrador]
+│   │   │   └── No → [Registrar evento + Aislar servicio temporalmente]
+│   │   └── Frecuencia: ¿Primer intento?
+│   │       ├── Sí → [Enviar advertencia automática]
+│   │       └── No → [Bloquear IP permanentemente]
+│   └── No → [Ignorar y seguir monitoreando]
+└── Tipo: ¿DDoS?
+    ├── Sí → [Activar mitigación de tráfico + Redirigir a CDN]
+    └── No → [Analizar otros patrones]
+
+Explicación:
+
+-Cada nodo representa una condición o decisión basada en parámetros como tipo de ataque, severidad y frecuencia.
+
+-Las hojas del árbol indican acciones concretas del sistema (ej.: bloquear IP).
+
+-El árbol prioriza respuestas graduales, evitando falsos positivos que afecten a usuarios legítimos.
