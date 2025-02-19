@@ -1,0 +1,40 @@
+1. ¿Qué es el Problema del Viajante (TSP)?
+
+El Problema del Viajante consiste en un viajero que desea visitar un conjunto de n ciudades, pasando por cada una exactamente una vez y regresando al punto de partida. Se conoce la distancia o costo entre cada par de ciudades, y el objetivo es encontrar la ruta de menor distancia total. Este problema es NP-difícil, es decir, no se conoce un algoritmo que lo resuelva de forma eficiente (en tiempo polinómico) para grandes n.
+
+2. Cálculo de rutas posibles para 15 ciudades
+
+Para n ciudades, el número de ordenaciones (o permutaciones) depende de cómo definamos las rutas:
+
+a) Si consideramos todas las permutaciones sin fijar ciudad de inicio y cada orden es distinto:
+   15! = 1,307,674,368,000 (aproximadamente 1.31 x 10^12)
+
+b) Si fijamos una ciudad de inicio (para no contar como diferentes las rotaciones):
+   (15 - 1)! = 14! = 87,178,291,200
+
+c) Si además consideramos equivalente la ruta y su inversa:
+   (14!) / 2 = 43,589,145,600
+
+En cualquier caso, la cantidad de rutas posibles crece de manera muy rápida a medida que aumenta el número de ciudades.
+
+3. Métodos heurísticos para el TSP
+
+Dado que el TSP es muy difícil de resolver de forma exacta para un gran número de ciudades, se utilizan métodos heurísticos y metaheurísticos para encontrar soluciones aproximadas en un tiempo razonable. Algunos de los más comunes son:
+
+Vecino más cercano (Nearest Neighbor): El viajante elige siempre la siguiente ciudad más cercana a la posición actual. Es sencillo, pero no siempre produce buenos resultados.
+
+Inserción más barata (Cheapest Insertion): Se parte de una pequeña ruta inicial y se insertan las ciudades restantes en la posición que menos incremente la distancia total.
+
+2-opt, 3-opt, k-opt: Métodos que buscan mejorar una ruta existente mediante intercambios de aristas (por ejemplo, cambiar el orden de visita de ciertas ciudades) si esto reduce la distancia.
+
+Algoritmos genéticos: Se basan en ideas de selección, cruce y mutación de una población de rutas candidatas para mejorar la solución a lo largo de varias generaciones.
+
+Búsqueda tabú (Tabu Search): Se efectúan modificaciones locales a la ruta y se mantiene una lista “tabú” para evitar deshacer inmediatamente ciertos cambios, impidiendo ciclos o estancamientos.
+
+Recocido simulado (Simulated Annealing): Se basa en la analogía del enfriamiento de metales. Acepta en ocasiones cambios que empeoran la solución para escapar de mínimos locales, reduciendo esa probabilidad a medida que avanza el proceso.
+
+Colonia de hormigas (Ant Colony Optimization): Simula hormigas virtuales que recorren las ciudades, dejando feromonas en las rutas útiles. Las rutas más prometedoras se refuerzan, guiando a las hormigas siguientes a seguirlas.
+
+Conclusión
+
+El Problema del Viajante es un ejemplo clásico de problema NP-difícil. Para 15 ciudades, la cantidad de rutas posibles es muy elevada, lo que ilustra la complejidad de este tipo de problemas. Las heurísticas y metaheurísticas mencionadas permiten obtener soluciones aproximadas y razonablemente buenas en tiempos factibles, lo que resulta práctico cuando el número de ciudades es grande.

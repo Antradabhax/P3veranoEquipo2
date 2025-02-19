@@ -1,0 +1,62 @@
+Inteligencia Artificial consultada: ChatGPT de OpenAI
+
+1 - ¿ Las inteligencias artificiales usan heurísticas ?
+
+Sí, cuando haces una pregunta, muchas inteligencias artificiales utilizan **heurísticas** para encontrar la mejor respuesta aproximada en un tiempo razonable.
+
+### **¿Cómo funciona esto en modelos como ChatGPT?**
+1. **Búsqueda en patrones de datos**
+   - En lugar de hacer cálculos exactos, el modelo usa probabilidades para predecir la respuesta más relevante según el contexto de la conversación.
+   - Se basa en patrones aprendidos de grandes cantidades de texto.
+
+2. **Heurísticas en la generación de respuestas**
+   - Se usan heurísticas para priorizar palabras o frases con mayor probabilidad de ser correctas.
+   - Ejemplo: Si preguntas "¿Cuál es la capital de Francia?", la IA no busca en una base de datos fija, sino que usa su conocimiento aprendido para responder "París" porque tiene alta probabilidad de ser la mejor respuesta.
+
+3. **Filtrado de información irrelevante**
+   - La IA aplica heurísticas para ignorar información menos relevante y enfocarse en lo que mejor responde tu pregunta.
+   - Por ejemplo, si preguntas "¿Cómo funciona la gravedad?", evita respuestas demasiado técnicas si detecta que buscas una explicación simple.
+
+4. **Manejo de incertidumbre**
+   - Si hay varias respuestas posibles, el modelo elige la más probable según el contexto.
+   - Ejemplo: Si preguntas "¿Cuándo se inventó la electricidad?", la IA podría inferir que te refieres a su descubrimiento en lugar de un evento específico como la creación de la bombilla.
+
+### **¿Es esto siempre exacto?**
+No siempre. Como las respuestas están basadas en probabilidades y patrones, pueden ocurrir errores o respuestas imprecisas. Pero las heurísticas ayudan a que el modelo responda rápido y de manera útil en la mayoría de los casos.
+
+
+2 -  ¿ Cuando hago una pregunta, las inteligencias artificiales buscan la mejor respuesta aproximada con heurísticas ?
+Sí, cuando haces una pregunta, muchas inteligencias artificiales utilizan **heurísticas** para encontrar la mejor respuesta aproximada en un tiempo razonable.
+
+### **¿Cómo funciona esto en modelos como ChatGPT?**
+1. **Búsqueda en patrones de datos**
+   - En lugar de hacer cálculos exactos, el modelo usa probabilidades para predecir la respuesta más relevante según el contexto de la conversación.
+   - Se basa en patrones aprendidos de grandes cantidades de texto.
+
+2. **Heurísticas en la generación de respuestas**
+   - Se usan heurísticas para priorizar palabras o frases con mayor probabilidad de ser correctas.
+   - Ejemplo: Si preguntas "¿Cuál es la capital de Francia?", la IA no busca en una base de datos fija, sino que usa su conocimiento aprendido para responder "París" porque tiene alta probabilidad de ser la mejor respuesta.
+
+3. **Filtrado de información irrelevante**
+   - La IA aplica heurísticas para ignorar información menos relevante y enfocarse en lo que mejor responde tu pregunta.
+   - Por ejemplo, si preguntas "¿Cómo funciona la gravedad?", evita respuestas demasiado técnicas si detecta que buscas una explicación simple.
+
+4. **Manejo de incertidumbre**
+   - Si hay varias respuestas posibles, el modelo elige la más probable según el contexto.
+   - Ejemplo: Si preguntas "¿Cuándo se inventó la electricidad?", la IA podría inferir que te refieres a su descubrimiento en lugar de un evento específico como la creación de la bombilla.
+
+### **¿Es esto siempre exacto?**
+No siempre. Como las respuestas están basadas en probabilidades y patrones, pueden ocurrir errores o respuestas imprecisas. Pero las heurísticas ayudan a que el modelo responda rápido y de manera útil en la mayoría de los casos.
+
+
+3 - En la pagina https://es.wikipedia.org/wiki/Clases_de_complejidad_P_y_NP se
+    menciona que "Se considera el problema más importante en este campo, el Clay
+    Mathematics Institute ha ofrecido un premio de un millón de dólares
+    estadounidenses para quien desarrolle la primera demostración correcta."  el
+    problema ya fue resuelto con ia ?
+
+ El problema de P versus NP es uno de los más importantes y desafiantes en la teoría de la computación. Hasta la fecha, no ha sido resuelto, ni por métodos tradicionales ni mediante el uso de inteligencia artificial. El Clay Mathematics Institute continúa ofreciendo un premio de un millón de dólares a quien proporcione una demostración correcta sobre si P es igual a NP o no.
+
+ Aunque la inteligencia artificial ha avanzado significativamente y ha contribuido en diversas áreas de la ciencia y la tecnología, aún no ha logrado resolver este problema específico. Investigadores y matemáticos de todo el mundo continúan trabajando en él, buscando una solución que tendría implicaciones profundas en campos como la criptografía, la optimización y la teoría de algoritmos.
+
+ Es importante destacar que, debido a la complejidad y profundidad del problema, cualquier anuncio de una solución debe ser evaluado rigurosamente por la comunidad científica antes de ser aceptado.
