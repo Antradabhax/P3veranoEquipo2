@@ -1,0 +1,19 @@
+Respuestas al problema de las Ocho Reinas:
+
+1. ¿Cómo funciona el backtracking en este problema?
+   El backtracking coloca una reina por fila, verificando en cada paso si la posición es segura (usando `isSafe`). Si una posición es válida, avanza a la siguiente fila. Si no encuentra una columna segura en la fila actual, retrocede a la fila anterior, ajusta la posición de la reina allí y continúa probando. Este proceso se repite hasta encontrar todas las soluciones posibles.
+
+2. ¿Qué pasa cuando el algoritmo encuentra una solución? ¿Qué ocurre cuando no puede colocar más reinas?
+   - Al encontrar una solución: Depende de la implementación. Si el objetivo es encontrar todas las soluciones, el algoritmo registra la configuración actual (ej. imprime el tablero) y sigue buscando más soluciones retrocediendo. Si solo busca una, termina.
+   - Si no puede colocar más reinas: Retrocede (backtrack) a la fila anterior, elimina la reina de esa fila y prueba la siguiente columna disponible.
+
+3. ¿Qué sucede en el código cuando el algoritmo "retrocede"? ¿Cómo se visualiza en Python Tutor?
+   - Al retroceder, se deshace la última decisión: se quita la reina de la fila actual y se decrementa el índice de la fila para probar nuevas posiciones en la fila anterior.
+   - En Python Tutor, esto se ve como un "salto" hacia atrás en la pila de ejecución, regresando a la llamada recursiva previa, con los cambios deshechos en el tablero.
+
+4. ¿Qué modificaciones harías para aumentar N a 8? ¿Cómo crees que cambiaría el tiempo de ejecución?
+   - Si el código usa una variable `N`, basta con cambiarla a 8. Por ejemplo: `N = 8`.
+   - El tiempo de ejecución crece exponencialmente debido a la complejidad \(O(N!)\). Para \(N=8\), el tiempo será significativamente mayor que para \(N=4\), pero aún manejable (existen 92 soluciones para \(N=8\)).
+
+5. ¿Por qué el método `isSafe` es crucial en este algoritmo?
+   `isSafe` garantiza que ninguna reina comparta columna, fila o diagonal con otra. Sin esta validación, el algoritmo colocaría reinas en posiciones inválidas, generando soluciones incorrectas. Es la base para el funcionamiento del backtracking.
