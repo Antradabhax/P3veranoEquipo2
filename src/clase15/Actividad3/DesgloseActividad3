@@ -1,0 +1,10 @@
+Cómo funciona esta heurística:
+
+-Dinero inicial: El cobrador empieza con dineroInicial.
+-Lista de sucursales: Cada sucursal tiene un monto que puede ser positivo (cobra) o negativo (paga).
+-Factibilidad: En cada paso, se buscan las sucursales que el cobrador puede visitar sin quedarse con dinero < 0.
+-Elección de la siguiente sucursal: De entre las sucursales factibles, se elige la de mayor monto para maximizar el ingreso o minimizar la pérdida.
+-Actualización: Se agrega esa sucursal al recorrido, se actualiza el dinero y se elimina la sucursal visitada de la lista.
+-Fin: El proceso se repite hasta que no queden sucursales o no haya ninguna sucursal factible.
+
+Esta no es una solución que garantice la optimización global, pero ilustra una forma simple de minimizar el riesgo de quedarse sin dinero usando un método greedy (codicioso).
