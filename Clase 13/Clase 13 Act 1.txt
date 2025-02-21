@@ -1,0 +1,46 @@
+1) Posibles acciones del atacante:
+	- Inyeccion SQL: Intentar manipular bases de datos mediante consultas malisiosas.
+	- Fuerza bruta: Intentar adivinar credenciales mediante multiples combinaciones.
+	- Phishing: Engañar usuarios para robar información sensible.
+	- Explotacion de vulnerabilidades: Usar fallos en software o configuraciones.
+
+2) Funciones del sistema de detección y técnicas:
+	- Análisis de patrones: Usar machine learning para detectar comportamientos sospechosos.
+	- Honeypots: Engañar a atacantes para estudiar sus métodos.
+	- Monitoreo en tiempo real: Analizar trafico y registros para identificar anomalías.
+	- Firewalls/IPS: Bloquear accesos no autorizados.
+
+3) Aplicación de la poda alfa-beta en el sist. de detección:
+	- Evaluar respuestas óptimas: El sistema simula posibles acciones del atacante (nodos) y 	determina la mejor defensa.
+	- Valor alfa: Representa la mejor opcion encontrada hasta ahora para el sistema (maximiza la 	defensa).
+	- Valor beta: Representa la mejor opcion para el atacante (minimiza la defensa).
+	- Poda: Si una rama del arbol ofrece un resultado peor que el valor alfa actual, se descarta. 	Esto acelera la toma de decisiones.
+	
+4) Ejemplo práctico:
+	Al detectar un posible DDoS, el sistema evalúa si "aumentar el ancho de banda" (nodo A) es 	mejor que "filtrar tráfico" (nodo B). Si el nodo A ya garantiza una mitigación suficiente 	(valor alfa alto), el nodo B se poda para no perder tiempo analizándolo.
+
+--------------------------------------------------------------------------------------
+
+Escenario: Detección de un intento de inyección SQL:
+
+Raíz: [Ataque detectado]
+├── Tipo: ¿Inyección SQL?
+│   ├── Sí
+│   │   ├── Severidad: ¿Alta?
+│   │   │   ├── Sí → [Bloquear IP + Alertar administrador]
+│   │   │   └── No → [Registrar evento + Aislar servicio temporalmente]
+│   │   └── Frecuencia: ¿Primer intento?
+│   │       ├── Sí → [Enviar advertencia automática]
+│   │       └── No → [Bloquear IP permanentemente]
+│   └── No → [Ignorar y seguir monitoreando]
+└── Tipo: ¿DDoS?
+    ├── Sí → [Activar mitigación de tráfico + Redirigir a CDN]
+    └── No → [Analizar otros patrones]
+
+Explicación:
+
+	-Cada nodo representa una condición o decisión basada en parámetros como tipo de ataque, 	severidad y frecuencia.
+
+	-Las hojas del árbol indican acciones concretas del sistema (ej.: bloquear IP).
+
+	-El árbol prioriza respuestas graduales, evitando falsos positivos que afecten a usuarios 	legítimos.
