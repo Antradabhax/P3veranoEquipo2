@@ -1,0 +1,22 @@
+1) ¿Qué es el problema del viajante? (TSP):
+	- El problema consiste en un viajero que desea visitar un conjunto de N ciudades, pasando exactamente una vez por cada una y regresando al punto de salida.
+	- Se conoce la distancia o el costo entre cada par de ciudades y el objetivo es encontrar la ruta de menor distancia total.
+	- Este problema es "NP-dificil", es decir que no se conoce ningun algoritmo que lo resuelva en tiempo polinomico.
+
+2) Cálculo de rutas posibles para 15 ciudades:
+	- Para N ciudades, el numero de ordenamientos depende de como definamos la ruta:
+		A) Si consideramos todas las permutaciones sin fijar ciudad de inicio y cada orden es distinto:
+   		15! = 1,307,674,368,000 (aproximadamente 1.31 x 10^12)
+		B) Si fijamos una ciudad de inicio (para no contar como diferentes las rotaciones):
+   		(15 - 1)! = 14! = 87,178,291,200
+		C) Si además consideramos equivalente la ruta y su inversa:
+   		(14!) / 2 = 43,589,145,600
+
+3) Métodos heurísticos para el TSP:
+	- Dado que el TSP es muy dificil de resolver para un gran numero de ciudades, se utilizan metodos heurísticos y metaheurísticos para encontrar soluciones aproximadas:
+		A) Nearest neighbor: El viajante elije siempre la siguiente ciudad mas cercana a la posicion actual.
+		B) Cheapest insertion: Se parte de una pequeña ruta inicial y se insertan las ciudades restantes en la posicion que menos incremente la distancia total.
+		C) Algoritmos genéticos: Se basa en ideas de seleccion natural, cruce y mutacion de una poblacion de rutas candidatas a mejorar la solucion a lo largo de varias generaciones.
+		D) Tabu search: Se efectuan modificaciones locales a la ruta y se mantiene una lista "Tabú" para evitar deshacer inmediatamente ciertos cambios, impidiendo, asi, los ciclos.
+		E) Ant colony optimization: Simula hormigas virtuales que recorren las ciudades, dejando feromonas en las rutas utiles. Las mejores rutas se refuerzas, guiando a las siguientes hormigas a seguirlas.
+

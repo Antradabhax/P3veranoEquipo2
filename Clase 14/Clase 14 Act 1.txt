@@ -1,0 +1,17 @@
+1) ¿Cómo funciona el backtracking en este problema?
+	- En este caso, se coloca una reina por fila, verificando en cada paso si la posicion es "segura". Si una posicion es segura, se avanza a la siguiente fila. En caso de no encontrar ninguna posicion segura en la fila actual, se retrocede a la reina anterior y se le ajusta la posición.
+
+2) ¿Qué pasa cuando el algoritmo enceuntra una solucion? y ¿Qué ocurre cuando no puede colocar más reinas?
+	- Cuando se encuentra una posición: El algoritmo registra la configuracion actual y sigue buscando mas soluciones, retrocediendo cuando sea necesario.
+	- Cuano no puede colocar mas reinas: Retrocede (Backtrack) a la fila anterior, elimina la reina de esa fila y prueba la siguiente columna disponible.
+
+3) ¿Qué sucede en el código cuando el algoritmo "retrocede"? y ¿Cómo se visualiza en Python Tutor?
+	- Al retroceder, se deshace la ultima decision (se quita la reina de la fila actual) y se decrementa el indice de la fila para probar nuevas posiciones con la reina anterior.
+	- En Python Tutor: Se ve como un "salto" hacia atras en la pila de ejecución regresando al llamado recursivo anterior.
+
+4) ¿Qué modificaciones harías para aumentar N a 8? y ¿Cómo crees que cambiaría el tiempo de ejecución?
+	- Si el codigo utiliza una variable N, alcanza con cambiarla por 8 (N = 8).
+	- El tiempo de ejecucion crece exponencialmente debido a la complejidad del algoritmo {O(N!)}.
+
+5) ¿Por qué el método `isSafe` es crucial en este algoritmo?
+	- Ese metodo garantiza que ninguna reina comparta columna fila o diagonal con otra. Sin este metodo, el algoritmo colocaria a las reinas en posiciones invalidas generando soluciones erroneas.

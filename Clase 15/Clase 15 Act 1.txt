@@ -1,0 +1,12 @@
+1) ¿ Las inteligencias artificiales usan heurísticas ?
+	- Sí, cuando haces una pregunta, muchas inteligencias artificiales utilizan heurística para encontrar la mejor respuesta aproximada en el menor tiempo posible.
+
+2) ¿ Cuando hago una pregunta, las inteligencias artificiales buscan la mejor respuesta aproximada con heurísticas ?
+	-Si, cuando se hace una pregunta, las IAs utilizan heurística para encontrar la mejor respuesta aproximada en un tiempo razonable.
+
+3) En la pagina https://es.wikipedia.org/wiki/Clases_de_complejidad_P_y_NP se
+    menciona que "Se considera el problema más importante en este campo, el Clay
+    Mathematics Institute ha ofrecido un premio de un millón de dólares
+    estadounidenses para quien desarrolle la primera demostración correcta."  el
+    problema ya fue resuelto con ia ?
+	- El problema P vs NP es una de los mas desafiantes en la teoria de la computación. Hasta la fecha no ha sido resuelto ni siquiera utilizando IA. Es por su alta complejidad que cualquier anuncio de una posible solucion debe ser controlado rigurosamente por la comunidad cientifica antes de ser aprobado.
